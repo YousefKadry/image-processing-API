@@ -6,7 +6,7 @@ const port = 3000;
 
 app.use(home_router);
 
-app.listen(port, () => {
+app.listen(port, (): void => {
     console.log('http://localhost:3000');
 });
 

@@ -19,6 +19,6 @@
     ],
     "rules": {
         "no-unused-expressions": "error",
-        "quotes": ["error", "double"]
+        "quotes": ["error", "single"]
     }
 }

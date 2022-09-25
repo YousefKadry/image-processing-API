@@ -1,8 +1,8 @@
 import resize from '../utilities/utilites';
 import path from 'path';
 
-describe('testing image resizing', () => {
-    it('passing invalid path will raise error', async () => {
+describe('testing image resizing', (): void => {
+    it('passing invalid path will raise error', async (): Promise<void> => {
         await expectAsync(
             resize(
                 `${path.resolve()}/assets/cr7.jpg`,
@@ -13,7 +13,7 @@ describe('testing image resizing', () => {
         ).toBeRejectedWithError();
     });
 
-    it('passing -ve width will raise error', async () => {
+    it('passing -ve width will raise error', async (): Promise<void> => {
         await expectAsync(
             resize(
                 `${path.resolve()}/assets/fjord.jpg`,
@@ -24,7 +24,7 @@ describe('testing image resizing', () => {
         ).toBeRejectedWithError();
     });
 
-    it('passing invalid hight will raise error', async () => {
+    it('passing invalid hight will raise error', async (): Promise<void> => {
         await expectAsync(
             resize(
                 `${path.resolve()}/assets/fjord.jpg`,
@@ -35,7 +35,7 @@ describe('testing image resizing', () => {
         ).toBeRejectedWithError();
     });
 
-    it('passing valid parameters will be resolved', async () => {
+    it('passing valid parameters will be resolved', async (): Promise<void> => {
         await expectAsync(
             resize(
                 `${path.resolve()}/assets/fjord.jpg`,
